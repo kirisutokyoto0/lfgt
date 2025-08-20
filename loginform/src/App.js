@@ -149,7 +149,7 @@ const App = () => {
             className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
               errors.email ? 'border-red-500' : 'border-gray-300'
             }`}
-            placeholder="Enter your email"
+            placeholder="username@email.com"
           />
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
@@ -166,17 +166,22 @@ const App = () => {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.password ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="Enter your password"
+              placeholder="Password"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
             >
-              {showPassword ? '🙈' : '👁️'}
+              <img 
+                src={!showPassword ? '/hide.png' : '/show.png'} 
+                alt={!showPassword ? 'Hide password' : 'Show password'}
+                className="w-5 h-5"
+              />
             </button>
           </div>
           {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
+          <p className="text-xs text-gray-500 mt-1">Allowed: letters (a-z, A-Z), numbers (0-9), and symbols (!@#$%^&*_-)</p>
         </div>
 
         <div className="flex items-center justify-between">
@@ -243,7 +248,7 @@ const App = () => {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.firstName ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="First name"
+              placeholder="John"
             />
             {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
           </div>
@@ -259,7 +264,7 @@ const App = () => {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.lastName ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="Last name"
+              placeholder="Doe"
             />
             {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
           </div>
@@ -276,7 +281,7 @@ const App = () => {
             className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
               errors.email ? 'border-red-500' : 'border-gray-300'
             }`}
-            placeholder="Enter your email"
+            placeholder="john.doe@email.com"
           />
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
@@ -293,17 +298,22 @@ const App = () => {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.password ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="Create a password"
+              placeholder="Password"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
             >
-              {showPassword ? '🙈' : '👁️'}
+              <img 
+                src={!showPassword ? '/hide.png' : '/show.png'} 
+                alt={!showPassword ? 'Hide password' : 'Show password'}
+                className="w-5 h-5"
+              />
             </button>
           </div>
           {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
+          <p className="text-xs text-gray-500 mt-1">Min 8 characters: letters (a-z, A-Z), numbers (0-9), symbols (!@#$%^&*_-)</p>
         </div>
 
         <div>
@@ -318,14 +328,18 @@ const App = () => {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.confirmPassword ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="Confirm your password"
+              placeholder="Password"
             />
             <button
               type="button"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
             >
-              {showConfirmPassword ? '🙈' : '👁️'}
+              <img 
+                src={!showConfirmPassword ? '/hide.png' : '/show.png'} 
+                alt={!showConfirmPassword ? 'Hide password' : 'Show password'}
+                className="w-5 h-5"
+              />
             </button>
           </div>
           {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>}
@@ -394,7 +408,7 @@ const App = () => {
             className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
               errors.email ? 'border-red-500' : 'border-gray-300'
             }`}
-            placeholder="Enter your email"
+            placeholder="username@email.com"
           />
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
